@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gem_store/screens/dashboard/home.dart';
 import 'package:gem_store/screens/dashboard/orders.dart';
@@ -32,26 +33,27 @@ class _DashboardState extends State<Dashboard> {
   List<PersistentBottomNavBarItem> _navBarsItems() {
     return [
       PersistentBottomNavBarItem(
-        icon: const Icon(Icons.home),
-        title: ("Property"),
+        icon: const Icon(Icons.home_filled),
+        title: ("Home"),
         activeColorPrimary: themeColor,
         inactiveColorPrimary: Colors.grey,
       ),
       PersistentBottomNavBarItem(
-        icon: const Icon(Icons.apartment),
-        title: ("Units"),
+        icon: const Icon(CupertinoIcons.search),
+        title: ("Search"),
         activeColorPrimary: themeColor,
         inactiveColorPrimary: Colors.grey,
       ),
       PersistentBottomNavBarItem(
-        icon: const Icon(Icons.people_outline_outlined),
-        title: ("Statements"),
+        icon: const Icon(Icons.shopping_basket_outlined),
+        title: ("Orders"),
         activeColorPrimary: themeColor,
         inactiveColorPrimary: Colors.grey,
       ),
       PersistentBottomNavBarItem(
-        icon: const Icon(Icons.settings),
-        title: ("Settings"),
+        icon: const Icon(CupertinoIcons.person),
+        //const Icon(Icons.person_2_outlined),
+        title: ("Profile"),
         activeColorPrimary: themeColor,
         inactiveColorPrimary: Colors.grey,
       ),
