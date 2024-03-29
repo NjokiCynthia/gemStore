@@ -1,15 +1,39 @@
 import 'package:flutter/material.dart';
+import 'package:gem_store/screens/models/orders.dart';
 
-class Orders extends StatefulWidget {
-  const Orders({super.key});
+class ListOrders extends StatefulWidget {
+  const ListOrders({super.key});
 
   @override
-  State<Orders> createState() => _OrdersState();
+  State<ListOrders> createState() => _ListOrdersState();
 }
 
-class _OrdersState extends State<Orders> {
+class _ListOrdersState extends State<ListOrders> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    List<Orders> list = [
+      Orders(
+          orderDate: '13/05/2021',
+          orderNumber: "Order #1514",
+          quantity: 2,
+          subtotal: 110,
+          trackingNumber: 'IK987362341',
+          status: 'DELIVERED'),
+      Orders(
+          orderDate: '13/05/2021',
+          orderNumber: "Order #1514",
+          quantity: 2,
+          subtotal: 110,
+          trackingNumber: 'IK987362341',
+          status: 'DELIVERED'),
+      Orders(
+          orderDate: '13/05/2021',
+          orderNumber: "Order #1514",
+          quantity: 2,
+          subtotal: 110,
+          trackingNumber: 'IK987362341',
+          status: 'DELIVERED'),
+    ];
+    return Scaffold();
   }
 }

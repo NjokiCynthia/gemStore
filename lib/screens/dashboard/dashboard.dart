@@ -25,7 +25,7 @@ class _DashboardState extends State<Dashboard> {
     return [
       const Home(),
       const Search(),
-      const Orders(),
+      const ListOrders(),
       const Profile(),
     ];
   }
