@@ -3,6 +3,7 @@ import 'package:gem_store/utilities/constants.dart';
 
 class MyTheme {
   static var appTheme = ThemeData(
+    useMaterial3: true,
     brightness: Brightness.dark,
     primaryColor: themeColor,
     scaffoldBackgroundColor: Colors.white,

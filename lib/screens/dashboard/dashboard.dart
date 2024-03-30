@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gem_store/screens/dashboard/home.dart';
-import 'package:gem_store/screens/dashboard/orders.dart';
+import 'package:gem_store/screens/dashboard/orders/orders.dart';
 import 'package:gem_store/screens/dashboard/profile.dart';
 import 'package:gem_store/screens/dashboard/search.dart';
 import 'package:gem_store/utilities/constants.dart';

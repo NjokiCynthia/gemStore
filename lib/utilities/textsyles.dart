@@ -111,13 +111,33 @@ Widget customTitle1(
   );
 }
 
-Widget customTitle(
+Widget buttonText(
     {required String text,
     Color? color,
     TextAlign textAlign = TextAlign.center,
     double fontSize = 16.0,
     FontWeight fontWeight = FontWeight.w400,
-    String fontFamily = 'SegoeUI'}) {
+    String fontFamily = 'ProductSans'}) {
+  return Text(
+    text,
+    style: TextStyle(
+      fontWeight: fontWeight,
+      fontSize: fontSize,
+      fontFamily: fontFamily,
+      color: color,
+    ),
+    textAlign: textAlign,
+    overflow: TextOverflow.ellipsis,
+  );
+}
+
+Widget customText(
+    {required String text,
+    Color? color,
+    TextAlign textAlign = TextAlign.center,
+    double fontSize = 14.0,
+    FontWeight fontWeight = FontWeight.normal,
+    String fontFamily = 'ProductSans'}) {
   return Text(
     text,
     style: TextStyle(
@@ -135,9 +155,9 @@ Widget customTitle2(
     {required String text,
     Color? color,
     TextAlign textAlign = TextAlign.center,
-    double fontSize = 16.0,
+    double fontSize = 20.0,
     FontWeight fontWeight = FontWeight.w400,
-    String fontFamily = 'SegoeUI'}) {
+    String fontFamily = 'ProductSans'}) {
   return Text(
     text,
     style: TextStyle(

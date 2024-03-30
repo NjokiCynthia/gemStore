@@ -1,6 +1,6 @@
 class Orders {
-  String? orderNumber, trackingNumber, orderDate, status;
-  int? quantity;
+  String? orderNumber, trackingNumber, orderDate, quantity;
+  int? status;
   double? subtotal;
 
   Orders({
