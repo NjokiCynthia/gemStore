@@ -131,6 +131,26 @@ Widget buttonText(
   );
 }
 
+Widget customText1(
+    {required String text,
+    Color? color,
+    TextAlign textAlign = TextAlign.center,
+    double fontSize = 10.0,
+    FontWeight fontWeight = FontWeight.w300,
+    String fontFamily = 'ProductSans'}) {
+  return Text(
+    text,
+    style: TextStyle(
+      fontWeight: fontWeight,
+      fontSize: fontSize,
+      fontFamily: fontFamily,
+      color: color,
+    ),
+    textAlign: textAlign,
+    overflow: TextOverflow.ellipsis,
+  );
+}
+
 Widget customText(
     {required String text,
     Color? color,

@@ -51,6 +51,11 @@ flutter:
     - assets/images/shop_cart.png
     - assets/images/back_button.png
     - assets/images/details.png
+    - assets/images/first.png
+    - assets/images/men.png
+    - assets/images/accessories.png
+    - assets/images/beauty.png
+    - assets/images/autumn.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
