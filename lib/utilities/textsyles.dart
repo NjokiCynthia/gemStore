@@ -97,7 +97,7 @@ Widget customTitle1(
     TextAlign textAlign = TextAlign.center,
     double fontSize = 20.0,
     FontWeight fontWeight = FontWeight.w400,
-    String fontFamily = 'SegoeUI'}) {
+    String fontFamily = 'ProductSans'}) {
   return Text(
     text,
     style: TextStyle(
@@ -157,6 +157,26 @@ Widget customTitle2(
     TextAlign textAlign = TextAlign.center,
     double fontSize = 20.0,
     FontWeight fontWeight = FontWeight.w400,
+    String fontFamily = 'ProductSans'}) {
+  return Text(
+    text,
+    style: TextStyle(
+      fontWeight: fontWeight,
+      fontSize: fontSize,
+      fontFamily: fontFamily,
+      color: color,
+    ),
+    textAlign: textAlign,
+    overflow: TextOverflow.clip,
+  );
+}
+
+Widget customTitle3(
+    {required String text,
+    Color? color,
+    TextAlign textAlign = TextAlign.center,
+    double fontSize = 20.0,
+    FontWeight fontWeight = FontWeight.w700,
     String fontFamily = 'ProductSans'}) {
   return Text(
     text,
