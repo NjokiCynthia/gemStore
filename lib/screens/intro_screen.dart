@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:gem_store/screens/dashboard/dashboard.dart';
-import 'package:gem_store/utilities/constants.dart';
 import 'package:gem_store/utilities/textsyles.dart';
 
 class IntroScreen extends StatefulWidget {
@@ -26,7 +25,7 @@ class _IntroScreenState extends State<IntroScreen> {
               height: MediaQuery.of(context).size.height,
             ),
             Container(
-              color: Color.fromRGBO(0, 0, 0, 0.5),
+              color: const Color.fromRGBO(0, 0, 0, 0.5),
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height,
             ),
@@ -37,7 +36,7 @@ class _IntroScreenState extends State<IntroScreen> {
                   children: [
                     heading1(
                         text: 'Welcome to GemStore!',
-                        color: Color.fromRGBO(255, 255, 255, 1.0)
+                        color: const Color.fromRGBO(255, 255, 255, 1.0)
                         //Theme.of(context).textSelectionTheme.selectionColor
                         ),
                     const SizedBox(
@@ -45,7 +44,7 @@ class _IntroScreenState extends State<IntroScreen> {
                     ),
                     heading2(
                         text: 'The home for a fashionista',
-                        color: Color.fromRGBO(255, 255, 255, 1.0))
+                        color: const Color.fromRGBO(255, 255, 255, 1.0))
                     // Theme.of(context).textSelectionTheme.selectionColor)
                   ],
                 )),
@@ -57,7 +56,7 @@ class _IntroScreenState extends State<IntroScreen> {
                   width: 193,
                   decoration: BoxDecoration(
                       border:
-                          Border.all(color: Color.fromRGBO(255, 255, 255, 1.0)),
+                          Border.all(color: const Color.fromRGBO(255, 255, 255, 1.0)),
                       borderRadius: BorderRadius.circular(29.5)),
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(

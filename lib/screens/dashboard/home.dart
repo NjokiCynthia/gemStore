@@ -139,7 +139,7 @@ class _HomeState extends State<Home> {
                     const SizedBox(
                       height: 24,
                     ),
-                    Container(
+                    SizedBox(
                       width: 312,
                       height: 168,
                       child: PageView.builder(
@@ -152,7 +152,7 @@ class _HomeState extends State<Home> {
                                   imagePaths[index],
                                   fit: BoxFit.cover,
                                 ),
-                                Positioned(
+                                const Positioned(
                                   top: 5,
                                   right: 0,
                                   child: Text(
@@ -170,7 +170,7 @@ class _HomeState extends State<Home> {
                                     children: List.generate(
                                       imagePaths.length,
                                       (i) => Container(
-                                        margin: EdgeInsets.symmetric(
+                                        margin: const EdgeInsets.symmetric(
                                             horizontal: 4.0),
                                         width: 12.0,
                                         height: 12.0,
