@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gem_store/screens/models/orders.dart';
 import 'package:gem_store/utilities/constants.dart';
 import 'package:gem_store/utilities/textsyles.dart';
 
@@ -10,21 +9,21 @@ Widget screenActionButton(
     VoidCallback? action,
     double buttonSize = 42.0,
     double iconSize = 22.0}) {
-  return Container(
+  return SizedBox(
     width: buttonSize,
     height: buttonSize,
     child: TextButton(
       style: TextButton.styleFrom(
-          padding: EdgeInsets.all(0.0),
-          shape: new RoundedRectangleBorder(
-              borderRadius: new BorderRadius.circular(30.0)),
+          padding: const EdgeInsets.all(0.0),
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(30.0)),
           backgroundColor: backgroundColor),
+      onPressed: action,
 
       child: Icon(
         icon as IconData?,
         size: iconSize,
       ),
-      onPressed: action,
 
       // textColor: textColor,
     ),
@@ -51,7 +50,7 @@ PreferredSizeWidget tertiaryPageAppbar(
           textColor: themeColor,
           action: action,
         ),
-        SizedBox(width: 20.0),
+        const SizedBox(width: 20.0),
         heading2(color: themeColor, text: title),
         Expanded(
           child: Row(
@@ -69,7 +68,7 @@ PreferredSizeWidget tertiaryPageAppbar(
       ],
     ),
     elevation: elevation,
-    backgroundColor: Theme.of(context).backgroundColor,
+    backgroundColor: Theme.of(context).colorScheme.background,
     //Theme.of(context).colorScheme.background,
     automaticallyImplyLeading: false,
     actions: actions,

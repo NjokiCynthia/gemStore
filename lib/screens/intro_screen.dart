@@ -58,12 +58,15 @@ class _IntroScreenState extends State<IntroScreen> {
                     borderRadius: BorderRadius.circular(29.5)),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                      backgroundColor: Color.fromRGBO(255, 255, 255, 0.25)),
+                      backgroundColor:
+                          const Color.fromRGBO(255, 255, 255, 0.25)),
                   onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: ((context) => Dashboard())));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: ((context) => const Dashboard())));
                   },
-                  child: Text(
+                  child: const Text(
                     'Get Started',
                     style: TextStyle(color: Colors.white),
                   ),

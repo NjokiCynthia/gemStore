@@ -2,20 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:gem_store/screens/dashboard/orders/cancelled_orders.dart';
 import 'package:gem_store/screens/dashboard/orders/delivered_orders.dart';
 import 'package:gem_store/screens/dashboard/orders/pending_orders.dart';
-import 'package:gem_store/screens/models/orders.dart';
 import 'package:gem_store/utilities/constants.dart';
 import 'package:gem_store/utilities/textsyles.dart';
-import 'package:gem_store/utilities/widgets.dart';
 
 class ListOrders extends StatefulWidget {
-  const ListOrders({Key? key}) : super(key: key);
+  const ListOrders({super.key});
 
   @override
   State<ListOrders> createState() => _ListOrdersState();
 }
 
 class _ListOrdersState extends State<ListOrders> {
-  double _appBarElevation = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -66,22 +63,22 @@ class _ListOrdersState extends State<ListOrders> {
                       ),
                       unselectedLabelColor: Colors.black,
                       labelColor: Colors.white,
-                      tabs: [
-                        Container(
+                      tabs: const [
+                        SizedBox(
                           height: 28,
                           width: 91,
                           child: Tab(
                             text: 'Pending',
                           ),
                         ),
-                        Container(
+                        SizedBox(
                           height: 28,
                           width: 91,
                           child: Tab(
                             text: 'Delivered',
                           ),
                         ),
-                        Container(
+                        SizedBox(
                           height: 28,
                           width: 91,
                           child: Tab(
@@ -92,7 +89,7 @@ class _ListOrdersState extends State<ListOrders> {
                     ),
                   ),
                 ),
-                Expanded(
+                const Expanded(
                   child: TabBarView(
                     children: [
                       PendingOrders(),

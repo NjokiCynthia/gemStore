@@ -76,7 +76,7 @@ Widget subtitle2(
   );
 }
 
-Widget subtitle3(
+Widget customText3(
     {required String text,
     Color? color,
     TextAlign textAlign = TextAlign.center}) {
@@ -86,8 +86,28 @@ Widget subtitle3(
         fontWeight: FontWeight.w400,
         fontSize: 13.0,
         color: color,
-        fontFamily: 'SegoeUI'),
+        fontFamily: 'ProductSans'),
     textAlign: textAlign,
+  );
+}
+
+Widget customText2(
+    {required String text,
+    Color? color,
+    TextAlign textAlign = TextAlign.center,
+    double fontSize = 12.0,
+    FontWeight fontWeight = FontWeight.w500,
+    String fontFamily = 'ProductSans'}) {
+  return Text(
+    text,
+    style: TextStyle(
+      fontWeight: fontWeight,
+      fontSize: fontSize,
+      fontFamily: fontFamily,
+      color: color,
+    ),
+    textAlign: textAlign,
+    overflow: TextOverflow.ellipsis,
   );
 }
 

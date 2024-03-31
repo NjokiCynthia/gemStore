@@ -3,7 +3,6 @@ import 'package:gem_store/screens/dashboard/orders/order_details.dart';
 import 'package:gem_store/screens/models/orders.dart';
 import 'package:gem_store/utilities/constants.dart';
 import 'package:gem_store/utilities/textsyles.dart';
-import 'package:gem_store/utilities/widgets.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 
 class DeliveredOrders extends StatefulWidget {
@@ -51,7 +50,7 @@ class _DeliveredOrdersState extends State<DeliveredOrders> {
                       pageTransitionAnimation:
                           PageTransitionAnimation.cupertino,
                       withNavBar: false,
-                      screen: OrderDetails());
+                      screen: const OrderDetails());
                 });
           }),
     );
@@ -59,8 +58,7 @@ class _DeliveredOrdersState extends State<DeliveredOrders> {
 }
 
 class OrdersCard extends StatelessWidget {
-  const OrdersCard({Key? key, required this.order, required this.onPressed})
-      : super(key: key);
+  const OrdersCard({super.key, required this.order, required this.onPressed});
 
   final Orders order;
   final VoidCallback onPressed;
@@ -72,16 +70,16 @@ class OrdersCard extends StatelessWidget {
       child: InkWell(
         onTap: onPressed,
         child: Container(
-          color: Colors.white,
+          color: const Color.fromRGBO(255, 255, 255, 1.0),
           height: 182,
           child: Card(
               borderOnForeground: false,
               elevation: 1.0,
-              color: Colors.white,
+              color: const Color.fromRGBO(255, 255, 255, 1.0),
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10)),
               child: Padding(
-                padding: EdgeInsets.only(left: 25, top: 18, right: 15),
+                padding: const EdgeInsets.only(left: 25, top: 18, right: 15),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
@@ -117,16 +115,16 @@ class OrdersCard extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 5,
                     ),
                     Row(
                       children: [
-                        Text(
+                        const Text(
                           'Tracking number:',
                           style: TextStyle(color: Colors.grey),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 5,
                         ),
                         Text(
@@ -144,7 +142,7 @@ class OrdersCard extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 5,
                     ),
                     Row(
@@ -152,11 +150,11 @@ class OrdersCard extends StatelessWidget {
                       children: [
                         Row(
                           children: [
-                            Text(
+                            const Text(
                               'Quantity:',
                               style: TextStyle(color: Colors.grey),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 5,
                             ),
                             Text(
@@ -176,11 +174,11 @@ class OrdersCard extends StatelessWidget {
                         ),
                         Row(
                           children: [
-                            Text(
+                            const Text(
                               'Subtotal:',
                               style: TextStyle(color: Colors.grey),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 5,
                             ),
                             Text(
@@ -200,14 +198,14 @@ class OrdersCard extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 18,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         getStatus(),
-                        Container(
+                        SizedBox(
                           height: 35,
                           child: OutlinedButton(
                               onPressed: () {
@@ -215,7 +213,7 @@ class OrdersCard extends StatelessWidget {
                                     pageTransitionAnimation:
                                         PageTransitionAnimation.cupertino,
                                     withNavBar: false,
-                                    screen: OrderDetails());
+                                    screen: const OrderDetails());
                               },
                               style: OutlinedButton.styleFrom(
                                 side: BorderSide(color: themeColor),
@@ -238,19 +236,19 @@ class OrdersCard extends StatelessWidget {
 
   Widget getStatus() {
     if (order.status == 1) {
-      return Text(
+      return const Text(
         "PENDING",
         style: TextStyle(color: Colors.lightBlueAccent),
       );
     } else if (order.status == 2) {
-      return Text(
+      return const Text(
           // text:
           "DELIVERED",
           style: TextStyle(
             color: Color.fromRGBO(0, 146, 84, 1.0),
           ));
     } else {
-      return Text("CANCELLED",
+      return const Text("CANCELLED",
           style: TextStyle(
             color: Colors.red,
           ));

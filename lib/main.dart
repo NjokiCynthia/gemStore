@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gem_store/screens/intro-screen.dart';
-import 'package:gem_store/utilities/constants.dart';
+import 'package:gem_store/screens/intro_screen.dart';
 import 'package:gem_store/utilities/theme.dart';
 
 void main() {

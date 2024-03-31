@@ -56,7 +56,28 @@ flutter:
     - assets/images/accessories.png
     - assets/images/beauty.png
     - assets/images/autumn.png
-
+    - assets/images/turtle_neck.png
+    - assets/images/long_sleeve.png
+    - assets/images/sportwe.png
+    - assets/images/hangout.png
+    - assets/images/hoodie.png
+    - assets/images/cotton.png
+    - assets/images/slim.png
+    - assets/images/image.png
+    - assets/images/linen.png
+    - assets/images/filted_waist.png
+    - assets/images/maxi.png
+    - assets/images/front_tie.png
+    - assets/images/ohara.png
+    - assets/images/tie_back.png
+    - assets/images/leaves.png
+    - assets/images/off_shoulder.png
+    - assets/images/Vector.png
+    - assets/images/Vector(1).png
+    - assets/images/stars.png
+    - assets/images/star.png
+    - assets/images/t_shirt.png
+    - assets/images/elegant.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

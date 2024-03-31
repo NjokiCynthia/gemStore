@@ -8,7 +8,7 @@ import 'package:gem_store/utilities/constants.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 
 class Dashboard extends StatefulWidget {
-  const Dashboard({Key? key}) : super(key: key);
+  const Dashboard({super.key});
 
   @override
   State<Dashboard> createState() => _DashboardState();
@@ -64,7 +64,7 @@ class _DashboardState extends State<Dashboard> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Color.fromRGBO(0, 0, 0, 0.15),
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(20.0),
