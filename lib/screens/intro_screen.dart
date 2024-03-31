@@ -30,7 +30,8 @@ class _IntroScreenState extends State<IntroScreen> {
               height: MediaQuery.of(context).size.height,
             ),
             Positioned(
-                top: 528,
+                //top: 528,
+                bottom: 184,
                 left: 47,
                 child: Column(
                   children: [
@@ -44,19 +45,23 @@ class _IntroScreenState extends State<IntroScreen> {
                     ),
                     heading2(
                         text: 'The home for a fashionista',
-                        color: const Color.fromRGBO(255, 255, 255, 1.0))
+                        color: const Color.fromRGBO(255, 255, 255, 1.0)),
                     // Theme.of(context).textSelectionTheme.selectionColor)
+                    const SizedBox(
+                      height: 31,
+                    ),
                   ],
                 )),
             Positioned(
-                top: 659,
+                // top: 659,
+                bottom: 100,
                 left: 87,
                 child: Container(
                   height: 53,
                   width: 193,
                   decoration: BoxDecoration(
-                      border:
-                          Border.all(color: const Color.fromRGBO(255, 255, 255, 1.0)),
+                      border: Border.all(
+                          color: const Color.fromRGBO(255, 255, 255, 1.0)),
                       borderRadius: BorderRadius.circular(29.5)),
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
