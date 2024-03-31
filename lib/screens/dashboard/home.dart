@@ -148,7 +148,10 @@ class _HomeState extends State<Home> {
                             return Stack(
                               alignment: Alignment.bottomCenter,
                               children: [
-                                Image.asset(imagePaths[index]),
+                                Image.asset(
+                                  imagePaths[index],
+                                  fit: BoxFit.cover,
+                                ),
                                 Positioned(
                                   top: 5,
                                   right: 0,
