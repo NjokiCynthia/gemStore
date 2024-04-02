@@ -15,7 +15,7 @@ class FoundProduct {
   static Map<String, Item> products = {
     "linen": Item(
         name: "Linen dress",
-        imagePath: "assets/images/linen.png",
+        imagePath: "assets/images/linen_dress.png",
         price: "\$52.00",
         vector: 'assets/images/Vector.png'),
     "fitted_waist": Item(

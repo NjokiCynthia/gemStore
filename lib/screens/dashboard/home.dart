@@ -59,8 +59,17 @@ class _HomeState extends State<Home> {
                                     border: Border.all(
                                         color: const Color.fromRGBO(
                                             58, 44, 39, 1.0))),
-                                child: Image.asset(
-                                  'assets/images/first.png',
+                                child: Container(
+                                  height: 40,
+                                  width: 40,
+                                  decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      border: Border.all(
+                                          color: const Color.fromRGBO(
+                                              58, 44, 39, 1.0))),
+                                  child: Image.asset(
+                                    'assets/images/here.png',
+                                  ),
                                 ),
                               ),
                               const SizedBox(
@@ -648,10 +657,13 @@ class ProductWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Image.asset(
-          product.imagePath,
-          width: 126,
-          height: 172,
+        Container(
+          color: Color.fromRGBO(232, 232, 232, 1.0),
+          child: Image.asset(
+            product.imagePath,
+            width: 126,
+            height: 172,
+          ),
         ),
         Text(
           product.name,

@@ -12,6 +12,9 @@ class Search extends StatefulWidget {
 class _SearchState extends State<Search> {
   @override
   Widget build(BuildContext context) {
+
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
     return Scaffold(
         backgroundColor: const Color.fromRGBO(255, 255, 255, 1.0),
         appBar: AppBar(
@@ -43,11 +46,9 @@ class _SearchState extends State<Search> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               customTitle1(
-                                  text: 'Found',
+                                  text: 'Found \n 152 Results',
                                   color: const Color.fromRGBO(51, 48, 46, 1.0)),
-                              customTitle1(
-                                  text: '152 Results',
-                                  color: const Color.fromRGBO(51, 48, 46, 1.0)),
+
                             ],
                           ),
                           Container(
@@ -81,11 +82,18 @@ class _SearchState extends State<Search> {
                         child: GridView.builder(
                           shrinkWrap: true,
                           itemCount: FoundProduct.products.length,
-                          gridDelegate:
-                              const SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 2,
-                            crossAxisSpacing: 16,
-                            mainAxisSpacing: 16,
+                          // gridDelegate:
+                          //     const SliverGridDelegateWithFixedCrossAxisCount(
+                          //   crossAxisCount: 2,
+                          //   crossAxisSpacing: 10,
+                          //   mainAxisSpacing: 10,
+                          //         childAspectRatio: width / (height / 4)
+                          //     ),
+                          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 2,
+                              crossAxisSpacing: 15,
+                              mainAxisSpacing: 15,
+                              childAspectRatio: .6
                           ),
                           itemBuilder: (context, index) {
                             final item =
@@ -94,33 +102,25 @@ class _SearchState extends State<Search> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Expanded(
-                                  child: Container(
-                                    height: 186,
-                                    width: 141,
-                                    decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(10),
-                                        color:
-                                            const Color.fromRGBO(196, 196, 196, 1.0)),
-                                    child: Stack(children: [
-                                      Image.asset(
-                                        item.imagePath,
-                                        width: 142,
-                                        height: 214,
-                                        fit: BoxFit.fill,
-                                      ),
-                                      Positioned(
-                                        top: 8,
-                                        right: 8,
-                                        child: Container(
-                                            height: 27,
-                                            width: 27,
-                                            decoration: const BoxDecoration(
-                                                shape: BoxShape.circle,
-                                                color: Colors.white),
-                                            child: Image.asset(item.vector)),
-                                      ),
-                                    ]),
-                                  ),
+                                  child: Stack(children: [
+                                    Image.asset(
+                                      item.imagePath,
+                                      width: double.infinity
+                                      ,
+                                      fit: BoxFit.contain,
+                                    ),
+                                    Positioned(
+                                      top: 8,
+                                      right: 8,
+                                      child: Container(
+                                          height: 27,
+                                          width: 27,
+                                          decoration: const BoxDecoration(
+                                              shape: BoxShape.circle,
+                                              color: Colors.white),
+                                          child: Image.asset(item.vector)),
+                                    ),
+                                  ]),
                                 ),
                                 const SizedBox(
                                   height: 4,

@@ -24,7 +24,7 @@ class ProductData {
     ),
     "sportwear": Product(
       name: "Sportwear Set",
-      imagePath: "assets/images/sportwe.png",
+      imagePath: "assets/images/sportswear.png",
       price: "\$80.00",
     ),
   };

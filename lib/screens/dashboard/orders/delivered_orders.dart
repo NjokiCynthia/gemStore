@@ -65,170 +65,173 @@ class OrdersCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 21.0, top: 8.0, right: 8.0),
-      child: InkWell(
-        onTap: onPressed,
-        child: Container(
-          color: const Color.fromRGBO(255, 255, 255, 1.0),
-          height: 182,
-          child: Card(
-              borderOnForeground: false,
-              elevation: 1.0,
-              color: const Color.fromRGBO(255, 255, 255, 1.0),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10)),
-              child: Padding(
-                padding: const EdgeInsets.only(left: 25, top: 18, right: 15),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: <Widget>[
-                        Text(
-                          order.orderNumber ?? '',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 16.0,
-                            color: Theme.of(context)
-                                .textSelectionTheme
-                                .selectionHandleColor,
-                          ),
-                          textAlign: TextAlign.start,
-                          maxLines: 2,
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                        Text(
-                          order.orderDate ?? '',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 16.0,
-                            color: Theme.of(context)
-                                .textSelectionTheme
-                                .selectionHandleColor,
-                          ),
-                          textAlign: TextAlign.start,
-                          maxLines: 2,
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                      ],
+    return InkWell(
+      onTap: onPressed,
+      child: Container(
+
+        padding:EdgeInsets.all(20),
+        margin: EdgeInsets.only(bottom: 20),
+        height: 182,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+           border: Border.all(color: Colors.grey.withOpacity(0.1), width: 1),
+           color: const Color.fromRGBO(255, 255, 255, 1.0),
+            //color: Colors.red,
+          boxShadow: [BoxShadow(
+            color: Color(0x000000).withOpacity(.2),
+            offset: Offset(0, 5),
+            blurRadius: 16,
+            spreadRadius: -8,
+          )]
+        ),
+
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Text(
+                  order.orderNumber ?? '',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 16.0,
+                    color: Theme.of(context)
+                        .textSelectionTheme
+                        .selectionHandleColor,
+                  ),
+                  textAlign: TextAlign.start,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                ),
+                Text(
+                  order.orderDate ?? '',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 16.0,
+                    color: Theme.of(context)
+                        .textSelectionTheme
+                        .selectionHandleColor,
+                  ),
+                  textAlign: TextAlign.start,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            Row(
+              children: [
+                const Text(
+                  'Tracking number:',
+                  style: TextStyle(color: Colors.grey),
+                ),
+                const SizedBox(
+                  width: 5,
+                ),
+                Text(
+                  order.trackingNumber ?? '',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 16.0,
+                    color: Theme.of(context)
+                        .textSelectionTheme
+                        .selectionHandleColor,
+                  ),
+                  textAlign: TextAlign.start,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: [
+                    const Text(
+                      'Quantity:',
+                      style: TextStyle(color: Colors.grey),
                     ),
                     const SizedBox(
-                      height: 5,
+                      width: 5,
                     ),
-                    Row(
-                      children: [
-                        const Text(
-                          'Tracking number:',
-                          style: TextStyle(color: Colors.grey),
-                        ),
-                        const SizedBox(
-                          width: 5,
-                        ),
-                        Text(
-                          order.trackingNumber ?? '',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 16.0,
-                            color: Theme.of(context)
-                                .textSelectionTheme
-                                .selectionHandleColor,
-                          ),
-                          textAlign: TextAlign.start,
-                          maxLines: 2,
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 5,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            const Text(
-                              'Quantity:',
-                              style: TextStyle(color: Colors.grey),
-                            ),
-                            const SizedBox(
-                              width: 5,
-                            ),
-                            Text(
-                              order.quantity ?? '',
-                              style: TextStyle(
-                                fontWeight: FontWeight.w500,
-                                fontSize: 16.0,
-                                color: Theme.of(context)
-                                    .textSelectionTheme
-                                    .selectionHandleColor,
-                              ),
-                              textAlign: TextAlign.start,
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            const Text(
-                              'Subtotal:',
-                              style: TextStyle(color: Colors.grey),
-                            ),
-                            const SizedBox(
-                              width: 5,
-                            ),
-                            Text(
-                              '\$ ${order.subtotal}',
-                              style: TextStyle(
-                                fontWeight: FontWeight.w500,
-                                fontSize: 16.0,
-                                color: Theme.of(context)
-                                    .textSelectionTheme
-                                    .selectionHandleColor,
-                              ),
-                              textAlign: TextAlign.start,
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 18,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        getStatus(),
-                        SizedBox(
-                          height: 35,
-                          child: OutlinedButton(
-                              onPressed: () {
-                                PersistentNavBarNavigator.pushNewScreen(context,
-                                    pageTransitionAnimation:
-                                        PageTransitionAnimation.cupertino,
-                                    withNavBar: false,
-                                    screen: const OrderDetails());
-                              },
-                              style: OutlinedButton.styleFrom(
-                                side: BorderSide(color: themeColor),
-                              ),
-                              child: customText(
-                                  text: 'DETAILS',
-                                  color: Theme.of(context)
-                                      .textSelectionTheme
-                                      .selectionHandleColor)),
-                        )
-                      ],
+                    Text(
+                      order.quantity ?? '',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 16.0,
+                        color: Theme.of(context)
+                            .textSelectionTheme
+                            .selectionHandleColor,
+                      ),
+                      textAlign: TextAlign.start,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
                     ),
                   ],
                 ),
-              )),
+                Row(
+                  children: [
+                    const Text(
+                      'Subtotal:',
+                      style: TextStyle(color: Colors.grey),
+                    ),
+                    const SizedBox(
+                      width: 5,
+                    ),
+                    Text(
+                      '\$ ${order.subtotal}',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 16.0,
+                        color: Theme.of(context)
+                            .textSelectionTheme
+                            .selectionHandleColor,
+                      ),
+                      textAlign: TextAlign.start,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 18,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                getStatus(),
+                SizedBox(
+                  height: 35,
+                  child: OutlinedButton(
+                      onPressed: () {
+                        PersistentNavBarNavigator.pushNewScreen(context,
+                            pageTransitionAnimation:
+                                PageTransitionAnimation.cupertino,
+                            withNavBar: false,
+                            screen: const OrderDetails());
+                      },
+                      style: OutlinedButton.styleFrom(
+                        side: BorderSide(color: themeColor),
+                      ),
+                      child: customText(
+                          text: 'DETAILS',
+                          color: Theme.of(context)
+                              .textSelectionTheme
+                              .selectionHandleColor)),
+                )
+              ],
+            ),
+          ],
         ),
       ),
     );

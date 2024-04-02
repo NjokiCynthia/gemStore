@@ -90,12 +90,15 @@ class _ListOrdersState extends State<ListOrders> {
                   ),
                 ),
                 const Expanded(
-                  child: TabBarView(
-                    children: [
-                      PendingOrders(),
-                      DeliveredOrders(),
-                      CancelledOrders(),
-                    ],
+                  child: Padding(
+                    padding: EdgeInsets.all(10),
+                    child: TabBarView(
+                      children: [
+                        PendingOrders(),
+                        DeliveredOrders(),
+                        CancelledOrders(),
+                      ],
+                    ),
                   ),
                 ),
               ],
