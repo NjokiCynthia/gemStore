@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gem_store/screens/models/product_search.dart';
+import 'package:gem_store/models/product_search.dart';
 import 'package:gem_store/utilities/textsyles.dart';
 
 class Search extends StatefulWidget {
@@ -13,8 +13,7 @@ class _SearchState extends State<Search> {
   @override
   Widget build(BuildContext context) {
 
-    double height = MediaQuery.of(context).size.height;
-    double width = MediaQuery.of(context).size.width;
+    
     return Scaffold(
         backgroundColor: const Color.fromRGBO(255, 255, 255, 1.0),
         appBar: AppBar(
@@ -89,7 +88,7 @@ class _SearchState extends State<Search> {
                           //   mainAxisSpacing: 10,
                           //         childAspectRatio: width / (height / 4)
                           //     ),
-                          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                               crossAxisCount: 2,
                               crossAxisSpacing: 15,
                               mainAxisSpacing: 15,

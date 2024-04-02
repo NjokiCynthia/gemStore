@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gem_store/screens/dashboard/orders/order_details.dart';
-import 'package:gem_store/screens/models/orders.dart';
+import 'package:gem_store/models/orders.dart';
 import 'package:gem_store/utilities/constants.dart';
 import 'package:gem_store/utilities/textsyles.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
@@ -68,23 +68,22 @@ class OrdersCard extends StatelessWidget {
     return InkWell(
       onTap: onPressed,
       child: Container(
-
-        padding:EdgeInsets.all(20),
-        margin: EdgeInsets.only(bottom: 20),
+        padding: const EdgeInsets.all(20),
+        margin: const EdgeInsets.only(bottom: 20),
         height: 182,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
-           border: Border.all(color: Colors.grey.withOpacity(0.1), width: 1),
-           color: const Color.fromRGBO(255, 255, 255, 1.0),
+            border: Border.all(color: Colors.grey.withOpacity(0.1), width: 1),
+            color: const Color.fromRGBO(255, 255, 255, 1.0),
             //color: Colors.red,
-          boxShadow: [BoxShadow(
-            color: Color(0x000000).withOpacity(.2),
-            offset: Offset(0, 5),
-            blurRadius: 16,
-            spreadRadius: -8,
-          )]
-        ),
-
+            boxShadow: [
+              BoxShadow(
+                color: const Color(0x00000000).withOpacity(.2),
+                offset: const Offset(0, 5),
+                blurRadius: 16,
+                spreadRadius: -8,
+              )
+            ]),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[

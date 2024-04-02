@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gem_store/screens/dashboard/orders/delivered_orders.dart';
-import 'package:gem_store/screens/models/orders.dart';
+import 'package:gem_store/models/orders.dart';
 
 class CancelledOrders extends StatefulWidget {
   const CancelledOrders({super.key});
