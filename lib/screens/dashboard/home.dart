@@ -167,6 +167,7 @@ class _HomeState extends State<Home> {
                                   child: Text(
                                     'Autumn \n Collection \n 2021',
                                     style: TextStyle(
+                                      fontWeight: FontWeight.w700,
                                         color:
                                             Color.fromRGBO(255, 255, 255, 1.0),
                                         fontSize: 22),
